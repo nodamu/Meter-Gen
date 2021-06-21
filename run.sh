@@ -1,0 +1,1 @@
+go run main.go meter-gen --startdate=1231233423 --meterid=hello --mqaddress=amqp://guest:guest@localhost:5672/

@@ -3,6 +3,9 @@
 * Requirements
     - Docker
     - Golang >= 1.15
+    - MongoDb >= 4.x
+    - Python >=3.6
+
 
 * To to start meter data generator run  
 ```  

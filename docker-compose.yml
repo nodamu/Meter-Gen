@@ -37,13 +37,13 @@ services:
       - 8008:8000
     networks:
       - dev-network
+    restart: always
     environment: 
       - MQADD=amqp://guest:guest@message-broker:5672/%2f
       - MONGO_URI=mongodb://mongodb_container:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false
     depends_on: 
       - mongodb_container
       - message-broker
-
 volumes:
   mongodb_data_container:
 

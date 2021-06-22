@@ -21,4 +21,6 @@ COPY . /app/
 
 WORKDIR /app/meter-gen-consumer
 
+
 CMD ["uvicorn", "main:app", "--host=0.0.0.0"]
+# CMD [ "./start.sh" ]

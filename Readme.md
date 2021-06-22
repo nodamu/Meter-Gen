@@ -20,3 +20,4 @@ docker-compose up
 ```
 ./main --startdate=1231233423 --meterid=hello --mqaddress=amqp://guest:guest@localhost:5672/
 ```
+* NB: startdate is in unix time format

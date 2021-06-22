@@ -19,7 +19,7 @@ func Fire(startDate int64, meterId string, mqAddress string) {
 	data := genMeterData(startDate, meterId)
 	meter_payload, err := json.Marshal(data)
 	if err != nil {
-		fmt.Errorf("Could not marshall struct into json")
+		fmt.Errorf("Failed to marshall struct into json")
 	}
 	// fmt.Print(string(meter_payload))
 	sendMeterPayLoad(mqAddress, string(meter_payload))

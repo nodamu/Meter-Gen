@@ -3,7 +3,6 @@
 version: "3.9"
 
 services:
-
   # Create service with RabbitMQ.
   message-broker:
     image: rabbitmq:3-management-alpine
@@ -17,6 +16,22 @@ services:
     restart: always
     networks:
       - dev-network
+
+  # MongoDb container   
+  mongodb_container:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootpassword
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data_container:/data/db
+    networks: 
+      - dev-network
+
+volumes:
+  mongodb_data_container:
 
 networks:
   # Create a new Docker network.

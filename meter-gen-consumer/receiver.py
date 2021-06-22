@@ -1,3 +1,4 @@
+import datetime
 from db import saveMessage
 import pika, os, time, logging, json
 import asyncio
@@ -14,6 +15,7 @@ def process_meter_event(event):
   payload = json.loads(event)
 
   logging.info(payload)
+  payload["timestamp"] = datetime.datetime.strptime( payload["timestamp"], '%Y-%m-%dT%H:%M:%S%z')
 
   saveMessage(payload)
 

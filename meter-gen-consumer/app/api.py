@@ -5,5 +5,9 @@ app = FastAPI()
 
 
 @app.get("/{meterId}")
-async def getMeterEvent(meterId: str):
+async def getMeterEvent(meterId: str,startDate : str, endDate: str):
     return await retrieve_student(meterId)
+
+
+
+

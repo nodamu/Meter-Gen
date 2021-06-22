@@ -2,7 +2,7 @@ from typing import Any, Type
 from pymongo import MongoClient
 import os, logging, datetime,json
 
-client = MongoClient(os.environ.get("MONGO_URL","localhost"), 27017)
+client = MongoClient(os.environ.get("MONGO_URI"))
 
 logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 # logging.basicConfig()

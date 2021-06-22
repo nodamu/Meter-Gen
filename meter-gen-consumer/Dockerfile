@@ -18,4 +18,7 @@ EXPOSE 8000
 # copy project
 COPY . /app/
 
-CMD ["uvicorn", "meter-gen-consumer.main:app", "--host=0.0.0.0", "--reload"]
+
+WORKDIR /app/meter-gen-consumer
+
+CMD ["uvicorn", "main:app", "--host=0.0.0.0"]

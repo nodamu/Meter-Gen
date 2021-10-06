@@ -1,5 +1,7 @@
 ## MeterGen App
 
+* MeterGen simulates data streams from electrical power meters
+
 * Requirements
     - Docker
     - Golang >= 1.15
